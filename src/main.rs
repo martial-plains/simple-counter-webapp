@@ -3,20 +3,51 @@ use yew_router::prelude::*;
 
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
-    #[at("/yew-template-for-github-io/")]
-    Home,
-    #[at("/yew-template-for-github-io/about")]
-    About,
-    #[not_found]
-    #[at("/yew-template-for-github-io/404")]
-    NotFound,
+    #[at("/simple-counter-webapp/")]
+    SimpleCounter,
+}
+
+#[function_component]
+fn SimpleCounter() -> Html {
+    let counter = use_state(|| 0);
+
+    let decrement = {
+        let counter = counter.clone();
+        Callback::from(move |_| counter.set(*counter - 1))
+    };
+
+    let increment = {
+        let counter = counter.clone();
+        Callback::from(move |_| counter.set(*counter + 1))
+    };
+
+    html! {
+        <div class={classes!["flex","h-screen", "flex-col", "justify-center"]}>
+            <div id="count-layout">
+                <div class={classes!["text-slate-900", "dark:text-white", "text-center", "text-9xl"]}>{*counter}</div>
+            </div>
+            <div class={classes!["add-subtract-buttons"]}>
+                    {if *counter == 0 {
+                        html!{}
+
+                    } else {
+                        html! {
+                            <button id="decrement-button" class={classes!["text-slate-900", "dark:text-white", "box-border", "h-32", "w-32", "p-4", "border-2"]} onclick={decrement}>
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        }
+                    }}
+                    <button id="increment-button" class={classes!["text-slate-900", "dark:text-white","box-border", "h-32", "w-32", "p-4", "border-2"]} onclick={increment}>
+                        <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    }
 }
 
 fn switch(routes: Route) -> Html {
     match routes {
-        Route::Home => html! { <h1>{ "Home" }</h1> },
-        Route::About => html! { <p>{ "About" }</p> },
-        Route::NotFound => html! { <p>{ "Not Found" }</p> },
+        Route::SimpleCounter => html! { <SimpleCounter /> },
     }
 }
 

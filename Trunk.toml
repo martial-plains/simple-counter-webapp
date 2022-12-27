@@ -2,8 +2,7 @@
 target = "index.html"
 dist = "dist"
 release = false
-public_url = "/yew-template-for-github-io/"
-# public_url = "/"                           # for {username}.github.io
+public_url = "/simple-counter-webapp/"
 # public_url = "/{project_name}/"            # for {username}.github.io/{project_name}
 
 [watch]

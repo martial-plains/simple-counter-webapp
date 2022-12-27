@@ -1,0 +1,20 @@
+[package]
+name = "frontend"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = { git = "https://github.com/yewstack/yew/", branch = "master", features = [
+    "csr",
+] }
+yew-router = { git = "https://github.com/yewstack/yew/", branch = "master" }
+reqwasm = "0.5.0"
+gloo = "0.8.0"
+serde = { version = "1.0.145", features = ["derive"] }
+
+[dependencies.web-sys]
+version = "0.3.60"
+features = ["HtmlInputElement"]

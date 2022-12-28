@@ -6,15 +6,70 @@
 /*!******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./css/index.scss ***!
   \******************************************************************/
-html {
+html,
+body {
     background-color: #15191D;
     color: #DCDCDC;
+    height: 100%;
+    overflow: auto;
 }
 
 body {
     font-family: Courier, Monospace;
 }
 
+.add-subtract-buttons button {
+    width: 50px;
+    height: 50px;
+    padding: 6px;
+    box-sizing: content-box;
+    margin: 0 .4em .4em .4em;
+    font-size: 2.5em;
+    line-height: 1;
+    border-radius: 50%;
+    text-align: center;
+    transition: border .3s;
+    position: absolute;
+    z-index: 800
+}
+
+.add-subtract-buttons button {
+    transition: .3s;
+}
+
+#increment-button {
+    right: 1em;
+    bottom: .5em
+}
+
+#decrement-button {
+    left: 1em;
+    bottom: .5em;
+}
+
+#count-container {
+    line-height: 1;
+    font-size: 16em;
+    text-align: center;
+    opacity: 0;
+    animation: fadedown 1s ease-out 4s forwards
+}
+
+@media only screen and (orientation: landscape) {
+
+    #increment-button,
+    #decrement-button {
+        bottom: calc(50vh - 54px)
+    }
+
+    #increment-button {
+        right: .5em
+    }
+
+    #decrement-button {
+        left: .5em
+    }
+}
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./css/main.scss ***!
   \*****************************************************************/
@@ -535,5 +590,72 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.box-border {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-slate-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }
 

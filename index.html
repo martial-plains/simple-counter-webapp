@@ -1,13 +1,16 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <link rel="stylesheet" href="/yew-template-for-github-io/main-eeb07d94c265c0da.css">
+  <link rel="stylesheet" href="/simple-counter-webapp/main-9c95b176d4d07960.css">
   
-  <title>yew template</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
+  <title>Simple Counter</title>
 
-<link rel="preload" href="/yew-template-for-github-io/frontend-2bc1759a2840429c_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/yew-template-for-github-io/frontend-2bc1759a2840429c.js"></head>
-<body>
+<link rel="preload" href="/simple-counter-webapp/frontend-5e5fc6c16bd8c7b0_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/simple-counter-webapp/frontend-5e5fc6c16bd8c7b0.js"></head>
+
+<body class="bg-gray-100 dark:bg-slate-800">
   <!-- Start Single Page Apps for GitHub Pages -->
   <script type="text/javascript">
     // Single Page Apps for GitHub Pages
@@ -20,13 +23,13 @@
     // When the single page app is loaded further down in this file,
     // the correct url will be waiting in the browser's history for
     // the single page app to route accordingly.
-    (function(l) {
-      if (l.search[1] === '/' ) {
-        var decoded = l.search.slice(1).split('&').map(function(s) {
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
           return s.replace(/~and~/g, '&')
         }).join('?');
         window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
+          l.pathname.slice(0, -1) + decoded + l.hash
         );
       }
     }(window.location))
@@ -34,4 +37,4 @@
   <!-- End Single Page Apps for GitHub Pages -->
 
 
-<script type="module">import init from '/yew-template-for-github-io/frontend-2bc1759a2840429c.js';init('/yew-template-for-github-io/frontend-2bc1759a2840429c_bg.wasm');</script></body></html>
+<script type="module">import init from '/simple-counter-webapp/frontend-5e5fc6c16bd8c7b0.js';init('/simple-counter-webapp/frontend-5e5fc6c16bd8c7b0_bg.wasm');</script></body></html>

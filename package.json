@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build_css": "npx tailwindcss -i ./css/tailwind/tailwind_base.css -o ./css/tailwind/dist/tailwind.css && npx webpack"
+    "build_css": "npx tailwindcss -i ./style/tailwind/tailwind_base.css -o ./style/tailwind/dist/tailwind.css && npx webpack"
   },
   "devDependencies": {
     "css-loader": "^6.7.0",

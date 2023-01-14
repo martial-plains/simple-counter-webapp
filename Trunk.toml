@@ -6,7 +6,7 @@ public_url = "/simple-counter-webapp/"
 # public_url = "/{project_name}/"            # for {username}.github.io/{project_name}
 
 [watch]
-watch = ["./index.html", "src/", "css/", "static/"]
+watch = ["./index.html", "src/", "style/", "static/"]
 
 [clean]
 dist = "dist"

@@ -27,7 +27,7 @@ fn set_stored_count(value: usize) {
 fn SimpleCounter(cx: Scope) -> impl IntoView {
     let (count, set_count) = create_signal(cx, get_stored_count().unwrap_or_default());
 
-    window_event_listener("storage", move |_| {
+    window_event_listener(ev::storage, move |_| {
         if let Some(stored_count) = get_stored_count() {
             if stored_count != count() {
                 set_stored_count(stored_count);

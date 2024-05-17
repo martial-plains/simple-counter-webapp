@@ -1,1 +1,55 @@
-<!doctype html><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name=viewport><script type=module>import a,*as b from"/simple-counter-webapp/counter-94333ff2d536e94b.js";a(`/simple-counter-webapp/counter-94333ff2d536e94b_bg.wasm`);window.wasmBindings=b</script><link href=/simple-counter-webapp/main-cc8172c7d4d04786.css integrity=sha384-tEV8VNBdjm0DfpXQgb8A4Fnt64PLPaqhXYc+JDYJ3x/KbCu2WVU0jqJAduhdr9dK rel=stylesheet><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css rel=stylesheet><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css rel=stylesheet><title>Simple Counter</title><link crossorigin href=/simple-counter-webapp/counter-94333ff2d536e94b.js integrity=sha384-Vt/ypqwtc7QGoqWkgNPMGLvfb9RjG2xE+T8dJZ3Fvo7HJiIuB6RwE3wnbBL8xRNq rel=modulepreload><link as=fetch crossorigin href=/simple-counter-webapp/counter-94333ff2d536e94b_bg.wasm integrity=sha384-D6FmS/h+FKP1pDdXWtfmcGSMLmyhKipZgGyIKLzpIcmiILPphNS3JLGPmX20wZyk rel=preload type=application/wasm></head><body class="bg-gray-100 dark:bg-slate-800"><script>((a=>{let c=1,e=null,d=`&`;if(a.search[c]===`/`){var b=a.search.slice(c).split(d).map((a=>a.replace(/~and~/g,d))).join(`?`);window.history.replaceState(e,e,a.pathname.slice(0,-c)+ b+ a.hash)}})(window.location))</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  
+<script type="module">
+import init, * as bindings from '/simple-counter-webapp/counter-c99e4fbffd1157ce.js';
+const wasm = await init('/simple-counter-webapp/counter-c99e4fbffd1157ce_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <link rel="stylesheet" href="/simple-counter-webapp/main-72923cea184cdf76.css" integrity="sha384&#x2D;bi&#x2B;&#x2B;E3ZKHiN&#x2B;SBLIcQmQjc81NcVRMimN2XQT&#x2B;&#x2B;u7WZaQbAd8aSPt0INZ8iz8xUli"/>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
+  <title>Simple Counter</title>
+
+<link rel="modulepreload" href="/simple-counter-webapp/counter-c99e4fbffd1157ce.js" crossorigin=anonymous integrity="sha384-AnlJ4QDWECVByqlsP6eKKwZmTnZSrowuUO1cqbLxxhXWQzWlyh0YcwVl6lUxVHKy">
+<link rel="preload" href="/simple-counter-webapp/counter-c99e4fbffd1157ce_bg.wasm" crossorigin=anonymous integrity="sha384-kkoy+eaJlL/bvHswewHFzPs/5KXUz0iGoMo5C6X/IdNO4Dd8lsliUIOUlWcNmQd3" as="fetch" type="application/wasm"></head>
+
+<body class="bg-gray-100 dark:bg-slate-800">
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
+</body>
+
+</html>

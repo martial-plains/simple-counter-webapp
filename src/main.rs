@@ -1,4 +1,5 @@
-use leptos::*;
+use leptos::{ev, prelude::*};
+use leptos_use::{use_service_worker_with_options, UseServiceWorkerOptions};
 
 fn get_stored_count() -> Option<usize> {
     let storage = window()
@@ -25,7 +26,7 @@ fn set_stored_count(value: usize) {
 
 #[component]
 fn SimpleCounter() -> impl IntoView {
-    let (count, set_count) = create_signal(get_stored_count().unwrap_or_default());
+    let (count, set_count) = signal(get_stored_count().unwrap_or_default());
 
     window_event_listener(ev::storage, move |_| {
         if let Some(stored_count) = get_stored_count() {
@@ -47,6 +48,12 @@ fn SimpleCounter() -> impl IntoView {
         set_stored_count(result);
         set_count.set(result);
     };
+
+    Effect::new(move |_| {
+        let _sw = use_service_worker_with_options(
+            UseServiceWorkerOptions::default().script_url("static/service-worker.js"),
+        );
+    });
 
     view! {
         <div class={"flex h-screen flex-col justify-center"}>

@@ -624,6 +624,10 @@ video {
   display: none;
 }
 
+.static {
+  position: static;
+}
+
 .box-border {
   box-sizing: border-box;
 }
